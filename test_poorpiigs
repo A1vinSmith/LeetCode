@@ -1,0 +1,24 @@
+class Solution(object):
+    def poorPigs(self, buckets, minutesToDie, minutesToTest):
+        """
+        :type buckets: int
+        :type minutesToDie: int
+        :type minutesToTest: int
+        :rtype: int
+        """
+        p = int(minutesToTest/minutesToDie)
+        return self.count(buckets, minutesToDie, minutesToTest, 1, p)
+            
+    def count(self, buckets, minutesToDie, minutesToTest, x, p):
+        factorial = 1
+        k=p
+        xx = x
+        while(k>=1 and xx >0):
+            factorial = factorial*xx
+            xx -= 1
+            k -= 1
+        
+        if buckets*x/factorial <= xx and xx > 0:
+            return x
+        else:
+            return self.count(buckets, minutesToDie, minutesToTest, x+1, p)
