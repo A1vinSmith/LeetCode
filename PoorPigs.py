@@ -6,9 +6,20 @@ class Solution(object):
         :type minutesToTest: int
         :rtype: int
         """
-        p = int(minutesToTest/minutesToDie)
-        return self.count(buckets, minutesToDie, minutesToTest, 1, p)
-            
+        if buckets==1:
+            return 0
+        p = int(minutesToTest/minutesToDie) + 1
+        counts=1
+        i =1 
+        while(True): 
+            counts *= p
+            if(counts >= buckets):
+                return i
+            i += 1
+        
+        
+        
+'''   
     def count(self, buckets, minutesToDie, minutesToTest, x, p):
         factorial = 1
         k=p
@@ -22,3 +33,4 @@ class Solution(object):
             return x
         else:
             return self.count(buckets, minutesToDie, minutesToTest, x+1, p)
+'''
