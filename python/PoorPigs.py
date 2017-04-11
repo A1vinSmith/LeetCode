@@ -16,21 +16,9 @@ class Solution(object):
             if(counts >= buckets):
                 return i
             i += 1
-        
-        
-        
-'''   
-    def count(self, buckets, minutesToDie, minutesToTest, x, p):
-        factorial = 1
-        k=p
-        xx = x
-        while(k>=1 and xx >0):
-            factorial = factorial*xx
-            xx -= 1
-            k -= 1
-        
-        if buckets*x/factorial <= xx and xx > 0:
-            return x
-        else:
-            return self.count(buckets, minutesToDie, minutesToTest, x+1, p)
-'''
+
+test = Solution()
+print(test.poorPigs(1000, 15, 60))
+print(test.poorPigs(1, 15, 60))
+print(test.poorPigs(25, 15, 60))
+print(test.poorPigs(125, 15, 60))
