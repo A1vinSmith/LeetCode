@@ -11,8 +11,8 @@ class Solution(object):
         print('j:%s, k:%s'%(j,k))
         parity = 0
         last = 0
-        for jj in range(j):
-            for kk in range(k):
+        for jj in range(j*9//10, j):
+            for kk in range(k*9//10, k):
                 summary = jj*kk
                 list_str = list(str(summary))
                 for i in range(int((len(list_str))/2)):
@@ -27,5 +27,5 @@ class Solution(object):
 test = Solution()
 print(test.largestPalindrome(1))
 print(test.largestPalindrome(2))
-print(test.largestPalindrome(5))
-print(test.largestPalindrome(6))
+print(test.largestPalindrome(3))
+print(test.largestPalindrome(4))
