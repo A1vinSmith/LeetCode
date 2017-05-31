@@ -3,6 +3,9 @@ package com.monster;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        String[] strList = {"5", "100.0", "200.0"};
+
+        RandomSeq.stdout(strList);
     }
 }
