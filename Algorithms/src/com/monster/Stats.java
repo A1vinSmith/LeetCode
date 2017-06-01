@@ -1,11 +1,9 @@
 package com.monster;
 
-/**
- * Created by sara on 01/06/2017.
- */
+
 public class Stats {
     public static void main(String[] args) {
-        Bag<Double> numbers = new Bag<Double>();
+        Bag<Double> numbers = new Bag<>();
 
         while (!StdIn.isEmpty())
             numbers.add(StdIn.readDouble());
