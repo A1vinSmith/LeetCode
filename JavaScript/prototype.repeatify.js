@@ -1,7 +1,7 @@
 String.prototype.repeatify = String.prototype.repeatify || function(times) {
-   var str = '';
+   let str = '';
 
-   for (var i = 0; i < times; i++) {
+   for (let i = 0; i < times; i++) {
       str += this;
    }
 
