@@ -14,6 +14,8 @@ console.log(obj.prop.getFullname());
 var test = obj.prop.getFullname;
 
 console.log(test());
+console.log(test.call(obj.prop));
+console.log(test.apply(obj.prop));
 /*
 打印出Aurelio De Rosa和John Doe
 原因是在 JavaScript 中，一个函数的上下文环境，也就是this关键词所引用对象，是依赖于函数是如何被调用的，而不是依赖于函数如何b被定义的
