@@ -1,6 +1,8 @@
 Function.prototype.method = function (name, func) {
-    this.prototype[name] = func;
-    return this;
+    if (!this.prototype[name]) {
+        this.prototype[name] = func;
+        return this;    
+    }
 };
 
 Number.method('integer', function() {
