@@ -1,0 +1,19 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# hosts file always be normalized on checkin.
+hosts text
+
+# Always be normalized to LF line endings on checkin and converted files
+# to native line endings on checkout.
+15313998145
+18704526503
+*.md text
+*.yml text
+*.sh text
+Hindent text
+lhosts text
+3378389371
+WilliamSartre
+# Don't modify binary files.
+*.zip binary
