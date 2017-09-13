@@ -11,7 +11,7 @@ Number.method('integer', function() {
 // document.writeln((-10/3).integer()); // -3
 
 String.method('trim', function() {
-    return this.replace(/^\s+|\s+$g, '');
+    return this.replace(/^\s+|\s+$/g, '');
 });
 //document.writeln('"' + " neat " .trim() + '"');
 
