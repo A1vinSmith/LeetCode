@@ -13,5 +13,29 @@ Number.method('integer', function() {
 String.method('trim', function() {
     return this.replace(/^\s+|\s+$/g, '');
 });
-//document.writeln('"' + " neat " .trim() + '"');
+// document.writeln('"' + " neat " .trim() + '"');
 
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+// THEN MODULE, WITH AUGMENTING TYPE
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+String.method('identify', function () {
+    const entity = {
+        quot: '"',
+        lt: '<',
+        gt: '>'
+    };
+    // return identify method
+    return function () {
+        // That is the real identify method, call replace
+        return this.replace(/&([^&;]+);/g,
+            // a: first param means word
+            // b: second param means index
+            function (a,b) {
+                let r;
+                r = entity[b];
+                return typeof r === 'string' ? r : a;
+            }
+        );
+    }
+}()); // IIFE
+// document.writeln('&lt;&quot;&gt;'.identify()); // <">
