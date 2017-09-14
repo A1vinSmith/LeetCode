@@ -39,3 +39,15 @@ String.method('identify', function () {
     }
 }()); // IIFE
 // document.writeln('&lt;&quot;&gt;'.identify()); // <">
+
+// *-*-*-*-*-*
+// THEN CURRY
+// *-*-*-*-*-*
+Function.method('curry', function() {
+    let slice = Array.prototype.slice,
+        args = slice.apply(arguments),
+        that = this;
+    return function () {
+        return that.apply(null, args.concat(slice.apply(arguments)))
+    }
+});
