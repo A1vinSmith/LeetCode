@@ -5,3 +5,11 @@ const permutations = (str) => (str.length <= 1) ? [str] :
       .reduce((r, x) => r.concat(x), [])
   ))
 
+
+/*
+ * first .map(char,i) separates first symbol of input
+ * (fx, "abcd" to 'a' and 'bcd' part, then 'b' and 'acd' part( w/o selected char)
+then it calls recursively permutations function and for each letter in 'bcd',
+'acd' part calls .map(p => char + p) function
+*/
+
