@@ -21,4 +21,4 @@ Output: 4
  * @param {number[]} nums
  * @return {number}
  */
-const singleNumber = (nums) => nums.reduce((acc, cur) => acc ^= cur)
+const singleNumber = (nums) => nums.reduce((acc, cur) => acc ^= cur, 0)
